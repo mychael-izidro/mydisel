@@ -1,0 +1,47 @@
+<div class="conteiner-tipo addcolor">
+<h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder:"Email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password",placeholder:"Senha" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password",placeholder:"Confirmar Senha" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up",class:"btnAcesso" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+
+</div>
+<div class="menu">
+     <h4>MyDisel</h4>
+     <div class="menu-itens">
+     <a href="/">Inicio</a>
+     <a href="/app/preco">Preços</a>
+     <a href="/app/map">Mapas</a>
+    <% if user_signed_in?%>
+        <div class="user"><img src="../user.png"/><a href="/area/perfil"><%=current_user.email[0..8]%></a></div>
+    <% else%>
+        <div class="user"><img src="../user.png"/><a href="/app/acesso">Acesso</a></div>
+    <% end%>
+    </div>
+ </div>  
+ 

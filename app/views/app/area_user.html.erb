@@ -1,2 +1,30 @@
-<h1>App#area_user</h1>
-<p>Find me in app/views/app/area_user.html.erb</p>
+<div class="conteiner-tipo addcolor">
+        <h2>Dashboard</h2>
+        <div class="destaque">
+            <div class="tipo-user">
+                <div class="divs_user divs destaqueMargin">
+                    <h5>Destaque do Site</h5>
+                    <%= link_to 'Posto Miranda', "/app/maps" %>
+                </div>
+                <div class="divs_user destaqueMargin">
+                    <h5>Destaque do Site</h5>
+                    <%= link_to 'Posto Miranda', "/app/maps" %>
+                </div>            
+            </div>
+        </div>
+        <%= link_to 'text', edit_user_registration_path, class: 'link' %>
+        <%= link_to 'sair',  destroy_user_session_path, class: 'link' %>
+ </div>
+<div class="menu">
+     <h4>MyDisel</h4>
+     <div class="menu-itens">
+     <a href="/">Inicio</a>
+     <a href="/app/preco">Preços</a>
+     <a href="/app/map">Mapas</a>
+    <% if user_signed_in?%>
+        <div class="user"><img src="../user.png"/><a href="/area/perfil"><%=current_user.email[0..8]%></a></div>
+    <% else%>
+        <div class="user"><img src="../user.png"/><a href="/app/acesso">Acesso</a></div>
+    <% end%>
+    </div>
+ </div>  

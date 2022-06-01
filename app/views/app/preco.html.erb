@@ -1,2 +1,32 @@
-<h1>App#preco</h1>
-<p>Find me in app/views/app/preco.html.erb</p>
+<div class="conteiner-tipo addcolor">
+        <h2>Preços</h2>
+        <div class="tipo-user precostab">
+        G - Gasolina | D - Disel | A - Alcool
+            <div class="precoComp">
+                <h5>posto miranda<h5>
+                <div> 8.45 | 10.20 | 6.80</div>
+            </div>
+            <div class="precoComp">
+                <h5>posto miranda<h5>
+                <div>8.45 | 10.20 | 6.80</div>
+            </div>
+            <div class="precoComp">
+                <h5>posto miranda<h5>
+                <div>8.45 | 10.20 | 6.80</div>
+            </div>
+        </div>
+        <a href="/" class="links">Voltar ao Início</a>
+</div>
+<div class="menu">
+     <h4>MyDisel</h4>
+     <div class="menu-itens">
+     <a href="/">Inicio</a>
+     <a href="/app/preco">Preços</a>
+     <a href="/app/map">Mapas</a>
+    <% if user_signed_in?%>
+        <div class="user"><img src="../user.png"/><a href="/area/perfil"><%=current_user.email[0..8]%></a></div>
+    <% else%>
+        <div class="user"><img src="../user.png"/><a href="/app/acesso">Acesso</a></div>
+    <% end%>
+    </div>
+ </div>  

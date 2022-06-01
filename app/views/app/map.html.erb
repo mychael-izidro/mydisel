@@ -1,2 +1,67 @@
-<h1>App#map</h1>
-<p>Find me in app/views/app/map.html.erb</p>
+ <div class="conteiner-tipo addcolor" >
+
+        <div id="map"></div>
+<div id="location">
+<button onclick="localizaPosto();">Todos os Posto</button>
+<button onclick="localizaPosto();">Posto Petrobras</button>
+<button onclick="localizaPosto();">Posto Chapadão</button>
+<button onclick="localizaPosto();">Posto Shell</button>
+<button onclick="localizaPosto();">Posto Santa Cruz</button>
+<button onclick="localizaPosto();">Posto Miranda</button>
+</div>
+</div>
+
+<div class="menu">
+     <h4>MyDisel</h4>
+     <div class="menu-itens">
+     <a href="/">Inicio</a>
+     <a href="/app/preco">Preços</a>
+     <a href="/app/map">Mapas</a>
+    <% if user_signed_in?%>
+        <div class="user"><img src="../user.png"/><a href="/area/perfil"><%=current_user.email[0..8]%></a></div>
+    <% else%>
+        <div class="user"><img src="../user.png"/><a href="/app/acesso">Acesso</a></div>
+    <% end%>
+     </div>
+ </div>  
+ <script>
+
+ map = leaflet.map('map').setView([-7.3328723,-47.4705724], 14);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+var greenIcon = L.icon({
+    iconUrl: '../local.png',
+
+    iconSize:     [65, 88], // size of the icon
+   // shadowSize:   [50, 64], // size of the shadow
+    iconAnchor:   [32, 86], // point of the icon which will correspond to marker's location
+   // shadowAnchor: [4, 62],  // the same for the shadow
+    popupAnchor:  [-3, -80] // point from which the popup should open relative to the iconAnchor
+});
+/*
+L.marker([-7.33228,-47.4693355], {icon: greenIcon}).addTo(map)
+    .bindPopup('Posto Santa Cruz')
+    .openPopup();
+L.marker([ -7.3320198,-47.4673542], {icon: greenIcon}).addTo(map)
+    .bindPopup('Posto Miranda')
+    .openPopup();
+L.marker([-7.3396035,-47.4544728], {icon: greenIcon}).addTo(map)
+    .bindPopup('Posto Shell')
+    .openPopup();
+L.marker([-7.3266497,-47.4437199], {icon: greenIcon}).addTo(map)
+    .bindPopup('Posto Chapadão')
+    .openPopup();
+L.marker([-7.3346532,-47.4704494], {icon: greenIcon}).addTo(map)
+    .bindPopup('Posto Petrobras')
+    .openPopup();
+*/
+var localizaPosto = () =>{
+    L.marker([-7.3346532,-47.4704494], {icon: greenIcon}).addTo(map)
+    .bindPopup('Posto Petrobras')
+    .openPopup();
+}
+
+ </script>

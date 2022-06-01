@@ -1,2 +1,31 @@
-<h1>App#acesso</h1>
-<p>Find me in app/views/app/acesso.html.erb</p>
+<div class="conteiner-tipo">
+        <h2>Eu sou?</h2>
+        <div class="tipo-user">
+            <div class="divs_user divs">
+                <h4>Sou Usuário</h4>
+                <div class="texto">
+                -Acesso ao Mapa.<br/>
+                -Acesso ao Preços.<br/>
+                -Receber Notificações.<br/>
+                </div>
+                <%= link_to 'Acessar', new_user_session_path, class: 'btnAcesso' %>
+
+            </div>
+            <div class="divs_user">
+                <h4>Sou Empresa</h4>
+                <div class="texto">
+                -Postar Preços.<br/>
+                -Acesso a Geolocalização.<br/>
+                -Postar Produtos.<br/>
+                </div>
+                <%= link_to 'Acessar', new_user_session_path, class: 'btnAcesso' %>
+
+            </div>
+        </div>
+        <a href="/" class="links">Voltar ao Início</a>
+</div>
+<script>
+var vamosLa = (a) =>{
+    location.ref = a;
+}
+</script>

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'app/index'
+  devise_for :users
+  root 'app#index'
   get 'app/acesso'
   get 'app/preco'
   get 'app/map'

@@ -1,2 +1,58 @@
-<h1>App#index</h1>
-<p>Find me in app/views/app/index.html.erb</p>
+<div class="conteiner">
+    <div id="1" class="caixa">
+        <div class="campo">
+            <h2>Melhor Preço ao Abastecer</h2>
+            <div>
+                <b>
+                Veja o melhor lugar, e onde abastecer o seu veiculo mais barato e com qualidade. Vamos ajudar a você economizar no final do mês.
+                </b>
+            </div>
+            <button class="btn" onclick="ir('/app/preco')">
+                Ver Preços
+            </button>
+        </div>
+    </div>
+    <div id="2" class="conteiner-caixas">
+            <h2>Empresa</h2>
+            <div>
+                <b>
+                Ao compartilhar seu preço com a nossa plataforma você acaba atraindo mais clientes para o seu Posto. Não perca tempo venha ganhar clientes com a gente!
+                </b>
+            </div>
+            <button onclick="ir('/app/acesso')" >
+                Cadastra Meu Posto
+            </button>
+    </div>
+    <div id="3" class="conteiner-caixas inverse-color">
+            <h2>Cidades</h2>
+            <div>
+                <b>
+                Nossa área de atuação é em Carolina - Ma, Aonde você vai poder ver o preço de combustivel de todos os posto da cidade.
+                </b>
+            </div>
+            <button onclick="ir('/app/preco')">
+                Ver Preços
+            </button>
+    </div>
+   <div class="menu">
+        <h4>MyDisel</h4>
+        <div class="menu-itens">
+        <a href="#1">Inicio</a>
+        <a href="#2">Empresa</a>
+        <a href="#3">Cidades</a>
+        <a href="/app/preco">Preços</a>
+        <a href="/app/map">Mapas</a>
+        
+        <% if user_signed_in?%>
+        <div class="user"><img src="user.png"/><a href="/area/perfil"><%=current_user.email[0..8]%></a></div>
+        <% else%>
+        <div class="user"><img src="user.png"/><a href="/app/acesso">Acesso</a></div>
+        <% end%>
+        </div>
+    </div>    
+</div>
+<script>
+var ir = (a) =>{
+    location.href= a;
+}
+</script>
