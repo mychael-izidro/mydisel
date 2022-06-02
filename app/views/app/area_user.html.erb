@@ -1,5 +1,4 @@
-<div class="conteiner-tipo addcolor">
-        <h2>Dashboard</h2>
+<div onload="socialUrl('text.com');" class="conteiner-tipo addcolor">
         <div class="destaque">
             <div class="tipo-user">
                 <div class="divs_user divs destaqueMargin">
@@ -12,8 +11,17 @@
                 </div>            
             </div>
         </div>
-        <%= link_to 'text', edit_user_registration_path, class: 'link' %>
-        <%= link_to 'sair',  destroy_user_session_path, class: 'link' %>
+        <div class="area">
+            <%= link_to 'Editar Conta', edit_user_registration_path, class: 'btnAcesso' %>
+            <%= link_to 'Sair', edit_user_registration_path, class: 'btnAcesso' %>
+            <p>Acesse nossas Mídias Sociais<p>
+            <div class="canais">
+                <img src="../facebook.png"/>
+                <img src="../telegram.png"/>
+                <img src="../whatsapp.png"/>
+                <img src="../instagram.png"/>
+            </div>
+        </div>
  </div>
 <div class="menu">
      <h4>MyDisel</h4>
@@ -28,3 +36,8 @@
     <% end%>
     </div>
  </div>  
+ <script>
+    var socialUrl = (a) =>{
+        document.getElementById('url').value = a;
+    }
+ </script>

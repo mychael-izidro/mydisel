@@ -196,8 +196,9 @@ body{
 
 #map{
     margin-top: 60px;
+    margin-left: 5px;
     position: relative;
-    width:78vw;
+    width:77vw;
     height: 100%;
     border: 1px solid var(--color--awhite);
 }
@@ -287,7 +288,8 @@ em{
 }
 /*---------------------------------preco.html.erb------------------------------------------------*/
 .conteiner-tipo{
-    width:100vw;
+    margin-top: -1px;
+    width:99vw;
     height: 100vh;
     position: relative;
     background-color: var(--color--ac1);
@@ -379,16 +381,7 @@ a:hover{
     color:  var(--color--ar3);
 }
 /*------------------------------------acesso.html.erb----------------------------------------------*/
-.conteiner-tipo{
-    width:100vw;
-    height: 100vh;
-    position: relative;
-    background-color: var(--color--ac1);;
-    color: var(--color--ar2);
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
+
 
 .conteiner-tipo h2{
     margin-top: 60px;
@@ -461,4 +454,44 @@ a:hover{
 .links:hover{
     color: var(--color--ar3);
     transition: .6s;
+}
+.area{
+    border: 1px solid var(--color--ac5);
+    border-radius: 15px;
+    background-color: var(--color--ac5);
+    width: 48%;
+    min-height: 300px;
+    height: auto;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 10px;
+}
+#url{
+    width: 310px;
+    height: auto;
+    text-align: center;
+    
+}
+.area p{
+    margin-top: 25px;
+    font-size: 20px;
+}
+.canais{
+    display: flex;
+    flex-direction: row;
+}
+.canais img{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin: 3px;
+}
+.addcolor{
+    margin-top: 58px;
 }
