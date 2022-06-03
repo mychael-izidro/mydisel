@@ -1,4 +1,5 @@
 class AppController < ApplicationController
+  
   def index
   end
 
@@ -9,13 +10,5 @@ class AppController < ApplicationController
   end
 
   def map
-  end
-
-  def area_user
-    @url_site = "www.text.com"
-  end
-
-  def area_emp
-    @url_site = "www.text.com"
   end
 end

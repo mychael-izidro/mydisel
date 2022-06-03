@@ -15,7 +15,7 @@
             <%= link_to 'Produtos da Empresa', edit_user_registration_path, class: 'btnAcesso' %>
             <%= link_to 'Editar Conta', edit_user_registration_path, class: 'btnAcesso' %>
             <%= link_to 'Dados da Empresa', edit_user_registration_path, class: 'btnAcesso' %>
-            <%= link_to 'Sair', edit_user_registration_path, class: 'btnAcesso' %>
+            <%= link_to 'Sair', sign_out_path, class: 'btnAcesso' %>
             <p>Acesse nossas Mídias Sociais<p>
             <div class="canais">
                 <img src="../facebook.png"/>
@@ -32,7 +32,7 @@
      <a href="/app/preco">Preços</a>
      <a href="/app/map">Mapas</a>
     <% if user_signed_in?%>
-        <div class="user"><img src="../user.png"/><a href="/app/area_user"><%=current_user.email[0..8]%></a></div>
+        <div class="user"><img src="../user.png"/><a href="/area/area_user"><%=current_user.email[0..8]%></a></div>
     <% else%>
         <div class="user"><img src="../user.png"/><a href="/app/acesso">Acesso</a></div>
     <% end%>
